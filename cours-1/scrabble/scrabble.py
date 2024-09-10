@@ -1,5 +1,7 @@
-fichier = open("cours-1\scrabble\jeu.txt", "r")
-print(fichier.read())
+def lecture () :
+    fichier = open("cours-1\scrabble\jeu.txt", "r")
+    return(fichier.readlines())
+print(lecture())
 
 
 dic = {"a":1, "b":3, "c":3, "d":2, "e":1, "f":4, "g":2, "u":1}
