@@ -1,10 +1,30 @@
-def lecture () :
+
+
+def lecture_dico () :
+    i = 0
+    dico = {}
     fichier = open("cours-1\scrabble\jeu.txt", "r")
-    return(fichier.readlines())
-print(lecture())
+    fichier = (fichier.readlines())
+    tab_dico = fichier[0]
+    print(tab_dico)
+    while i < len(tab_dico) :
+        dico[tab_dico[i]] = int (tab_dico[i+2])
+        i += 4
+    return dico
 
 
-dic = {"a":1, "b":3, "c":3, "d":2, "e":1, "f":4, "g":2, "u":1}
+def lecture_mot() :
+    tab_pro = []
+    tab_mot = []
+    fichier = open("cours-1\scrabble\jeu.txt", "r")
+    fichier = (fichier.readlines())
+    for i in range (1, len(fichier)) :
+        tab_pro.append(fichier[i])
+    return tab_pro
+
+dic = lecture_dico()
+mot = lecture_mot()
+
 
 def scrabble (mot, dic) :
     result = 0
@@ -13,7 +33,6 @@ def scrabble (mot, dic) :
             result = dic[i] + result
     return result
 
-mot = ["cafe", "face", "button", "agregre"]
 
 def trie (mot) :
     reste_val = 0
