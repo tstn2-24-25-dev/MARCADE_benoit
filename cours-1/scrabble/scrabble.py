@@ -4,8 +4,9 @@ def lecture_dico () :       # Récupère le critère de notation des mots dans l
     i = 0
     dico = {}
     fichier = open("cours-1\scrabble\jeu.txt", "r")
-    fichier = (fichier.readlines())
-    tab_dico = fichier[0]
+    # fichier = (fichier.readlines())
+    # tab_dico = fichier[0]
+    tab_dico = fichier.readline().strip()
     print(tab_dico)
     while i < len(tab_dico) :
         dico[tab_dico[i]] = int (tab_dico[i+2])
@@ -19,7 +20,7 @@ def lecture_mot() :     # Récupère les mots dans le fichier txt
     fichier = open("cours-1\scrabble\jeu.txt", "r")
     fichier = (fichier.readlines())
     for i in range (1, len(fichier)) :
-        tab_pro.append(fichier[i])
+        tab_pro.append(fichier[i].strip())
     return tab_pro
 
 dic = lecture_dico()
