@@ -1,6 +1,6 @@
 
 
-def lecture_dico () :
+def lecture_dico () :       # Récupère le critère de notation des mots dans le fichier txt
     i = 0
     dico = {}
     fichier = open("cours-1\scrabble\jeu.txt", "r")
@@ -13,7 +13,7 @@ def lecture_dico () :
     return dico
 
 
-def lecture_mot() :
+def lecture_mot() :     # Récupère les mots dans le fichier txt
     tab_pro = []
     tab_mot = []
     fichier = open("cours-1\scrabble\jeu.txt", "r")
@@ -26,7 +26,7 @@ dic = lecture_dico()
 mot = lecture_mot()
 
 
-def scrabble (mot, dic) :
+def scrabble (mot, dic) :       # Calcul du score
     result = 0
     for i in mot :
         if (i in dic) :
@@ -34,13 +34,13 @@ def scrabble (mot, dic) :
     return result
 
 
-def trie (mot) :
+def trie (mot) :        # Trie des mots selon le score dans l'ordre décroissant
     reste_val = 0
     reste_mot = ""
     k = 0
     dico_valeur = []
     if (len(mot) == 0) :
-        return "Il n'y a pas de mot dans la liste"
+        return "Il n'y a pas de mot dans la liste\n"
     if (len(mot) == 1) :
         return (mot[0])
     for i in mot :
@@ -57,10 +57,10 @@ def trie (mot) :
     return affiche(mot)
     
 
-def affiche(tableau) :
+def affiche(tableau) :      # Affichage du final
     for i in range (len(tableau)) :
         print (tableau[i])
     return ""
 
 
-print(trie(mot))
+print(trie(mot))        # Lancement du programme
