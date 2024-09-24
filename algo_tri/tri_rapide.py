@@ -1,4 +1,4 @@
-def tri_rapide(tab) :
+def triRapide(tab) :
 
     if tab == [] :
         return tab
@@ -17,10 +17,10 @@ def tri_rapide(tab) :
             tab_droit.append(tab[i])
     
     # On renvoie la fonction récurcive qui va répéter les étapes pour avoir une liste droite et une liste gauche trié et on ajoute le pivot au milieu des 2 listes
-    return tri_rapide(tab_gauche) + [tab[0]] + tri_rapide(tab_droit)    # tab[0] représente le pivot
+    return triRapide(tab_gauche) + [tab[0]] + triRapide(tab_droit)    # tab[0] représente le pivot
 
 
 
-tableau = [8,4,7,11,15,5,17,1,10,18]
+tableau = [4,8,2,10,1,9,7,6,3,5]
 
-print(tri_rapide(tableau))
+print(triRapide(tableau))

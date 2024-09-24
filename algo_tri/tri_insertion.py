@@ -1,4 +1,4 @@
-def tri_insertion(tableau):
+def triInsertion(tableau):
     tab = tableau
 
     for i in range(1,len(tab)):
@@ -12,6 +12,6 @@ def tri_insertion(tableau):
     
     return tab
 
-tableau = [5,4,3,1,2]
+tableau = [4,8,2,10,1,9,7,6,3,5]
 
-print(tri_insertion(tableau))
+print(triInsertion(tableau))
